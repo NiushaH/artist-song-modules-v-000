@@ -26,6 +26,8 @@ class Artist
     song.artist = self
   end
 
+  extend Memorable::ClassMethods
+
   def add_songs(songs)
     songs.each { |song| add_song(song) }
   end
