@@ -1,12 +1,14 @@
 require 'pry'
 
 class Artist
+  
+  
   attr_accessor :name
   attr_reader :songs
 
   @@artists = []
 
-  extend Memorable
+  include Memorable::InstanceMethods
 
   def initialize
     super
