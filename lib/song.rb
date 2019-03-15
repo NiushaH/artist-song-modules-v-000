@@ -1,13 +1,12 @@
 require 'pry'
 
 class Song
-
   attr_accessor :name
   attr_reader :artist
 
   @@songs = []
 
-  extend Memorable
+  include Memorable::InstanceMethods
 
   # def initialize
   #   @@songs << self
@@ -19,7 +18,7 @@ class Song
     @@songs
   end
 
-  # extend Memorable
+  extend Memorable::ClassMethods
 
   def artist=(artist)
     @artist = artist
