@@ -8,10 +8,6 @@ class Song
 
   include Memorable::InstanceMethods
 
-  # def initialize
-  #   @@songs << self
-  # end
-
   extend Findable
 
   def self.all
